@@ -13,5 +13,5 @@ function gradosF(f){
 var celsius=0;
 var fahrenheit=100;
 
-document.write("Una temperatura de "+celsius+"° Celsius equivale a "+gradosC(celsius)+"° Fahrenheit.");
+document.write("Una temperatura de "+celsius+"° Celsius equivale a "+gradosC(celsius)+"° Fahrenheit.<br>");
 document.write("Una temperatura de "+fahrenheit+"° Fahrenheit equivale a "+gradosF(fahrenheit)+"° Celsius.");
