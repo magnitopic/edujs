@@ -9,7 +9,7 @@
  var primo  
  for (i=3;i<=1111111;i=i+2){  
      primo=true  
-     for(j=3;j<Math.sqrt(i);j=j+2){  
+     for(j=3;j<=Math.sqrt(i);j=j+2){  
          if (i%j===0){  
              primo=false;  
              break;  
