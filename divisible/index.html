@@ -2,11 +2,11 @@
 <html>
 <head>
 <script>
-document.write("Calculo de los divisores de un número");
+document.write("Calculo de los divisores de un número<br>");
 do{
     var n = prompt("Dime el número que quieras (de 1 a un millón)", 144);
 }while(isNaN(n) || n>= 1000000 || n<= 1 || n%1!==0);
-document.write("Los divisores de "+n+" son:");
+document.write("Los divisores de "+n+" son:<br>");
 for (var i=1;i<=n;i++){
 	if (n%i===0){
 		document.write(i);
