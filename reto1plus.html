@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>   
+		<title>Calcular</title>
+	</head>
+	<body>
+		<h1>Haz varias operaciones con dos numeros</h1>
+		<p>En esta lista aparecen los numeros que has dado haciendo varias operaciones</p>
+		<input id="num1" value="8" ><br>  
+		<input id="num2" value="6" >  
+		<button type="button" onclick="myFunction()">Sumar</button>  
+		<p id="sumando1"></p>  
+		<p id="sumando2"></p>
+		<p id="sumando3"></p>
+		<p id="sumando4"></p>
+		<p id="sumando5"></p>
+		
+ <script>  
+ function myFunction() {  
+   var x,y,suma,text;  
+   x = document.getElementById("num1").value;  
+   y = document.getElementById("num2").value;  
+    suma=parseFloat(x)+parseFloat(y); 
+		resta=parseFloat(x)-parseFloat(y);
+		multiplica=parseFloat(x)*parseFloat(y);
+		didision=parseFloat(x)/parseFloat(y);
+		elevado=Math.pow(parseFloat(x),parseFloat(y));		 
+    text1= suma;
+		text2= resta;
+		text3= multiplica;
+		text4= didision;
+		text5= elevado;		 
+		document.getElementById("sumando1").innerHTML = text1; 
+		document.getElementById("sumando2").innerHTML = text2;
+		document.getElementById("sumando3").innerHTML = text3;
+		document.getElementById("sumando4").innerHTML = text4;
+		document.getElementById("sumando5").innerHTML = text5;
+ }
+
+
+			/*
+			function(){
+				
+			}
+
+			document.write(n1+"+"+n2+"="+suma(n1,n2)+"<br>");
+			document.write(n1+"-"+n2+"="+resta(n1,n2)+"<br>");
+			document.write(n1+"x"+n2+"="+producto(n1,n2)+"<br>");
+			document.write(n1+"/"+n2+"="+division(n1,n2)+"<br>");
+			document.write(n1+"^"+n2+"="+elevar(n1,n2));
+			
+			function suma(n1,n2)
+			{
+				var resultado=parseInt(n1)+parseInt(n2)
+				return resultado
+			}
+			function resta(n1,n2)
+			{
+				var resultado=parseInt(n1)-parseInt(n2)
+				return resultado
+			}
+			function producto(n1,n2)
+			{
+				var resultado=parseInt(n1)*parseInt(n2)
+				return resultado
+			}
+			function division(n1,n2)
+			{
+				var resultado=parseInt(n1)/parseInt(n2)
+				return resultado
+			}
+			function elevar(n1,n2)
+			{
+				var resultado=Math.pow(parseInt(n1),parseInt(n2))
+				return resultado
+			}
+			*/
+		</script>
+	</body>
+</html>
