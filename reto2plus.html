@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reto 2 plus</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+					<p>Inicial</p>
+				</td>
+				<td>
+					<input type=text" id="num1" value="10">
+				</td>
+				<td rowspan="3">
+					<FORM>      
+						<P>
+						<input name="tres" type="radio" id="pares" />Pares<br>
+						<input name="tres" type="radio" id="impares" />Impares<br>
+						<input name="tres" type="radio" id="todos" checked />Todos
+						</P>
+						<INPUT type="reset" value="Reset">
+						</P>
+					</FORM>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Final</p> 
+				</td>
+				<td>
+					<input type="text" id="num2" value="20"><br> 
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button type="button" onclick="myFunction()">Serie</button>
+				</td>
+			</tr>
+		</table>
+		<p id="frase">Introduzca el valor inicial y final de la serie.</p>
+		<script>
+			function myFunction() {
+				var inicio=parseInt(document.getElementById("num1").value);
+				var fin=parseInt(document.getElementById("num2").value);
+			 var text="";
+				var incremento=1;
+				var k=inicio;
+				if (inicio>fin){
+					incremento=-1;
+					var caja=fin;
+					fin=inicio;
+					inicio=caja;
+					k=fin;   //k se parece a i pero si el orden es descendente comienza por fin
+				}
+				var n=fin-inicio+1;
+				var i=inicio;
+			 for(j=0;j<n;j++){
+					 if(document.getElementById('pares').checked && i%2==0)
+					 {
+						text+=k+"<br>";
+					 }
+					 else if (document.getElementById('impares').checked && i%2!=0)
+					 {
+						 text+=k+"<br>";
+					 }
+					 else if (document.getElementById('todos').checked)
+					 {
+						 text+=k+"<br>";
+					 }
+					 i=i+incremento;
+					 k=k+incremento;
+					document.getElementById("frase").innerHTML = text;
+				}
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
