@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Generación de números aleatorios en JavaScript</title>
+  </head>
+  <body>
+    <h1>Números aleatorios entre 1 y 100</h1>
+    <p>Generación de números aleatorios entre 1 y 100.
+      Se van generando hasta que aparezca un número entre 90 y 100 (ambos incluidos)
+     en ese momento se detiene la generación de números y se mustran los valores en pantalla.
+    El último número generado será un valor que estará entre 90 y 100 (ambos incluidos).</p>
+    <button type="button" onclick="myFunction()">Genera</button>
+    <p id="frase">Pulse el botón para iniciar la generación de aleatorios.</p>
+    <script>
+      function myFunction()
+      {
+        var text="";
+        var x; //este es el número aleatorio
+        do {
+          x=Math.floor((Math.random()*100)+1);
+          text +=x+", ";
+        } while (x<90);
+        text=text.replace(/,\s*$/, ""); //elimina la última coma y el espacio posterior a ella
+        document.getElementById("frase").innerHTML = text;
+      }
+</script>
+  </body>
+</html>
