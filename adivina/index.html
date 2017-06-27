@@ -1,5 +1,43 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Hola, este codigo está siendo actualizando. Porfavor mantengasé atento al blog paqra cuando termine.</h1>
-  </body>
+	<head>
+		<title>El numero secreto</title>
+	</head>
+	<body>
+		<h1>Este es el juego del numero secreto</h1>
+		<p>El ordenador ha elegido un numero aleatorio del 1-100 y tu tendras que adivinarlo, mucha suerte.</p>
+		<input id="M" value="2" ><br>
+		<button type="button" onclick="myFunction()">Jugar</button>
+		<div id="txt"></div>
+		<script type="text/javascript">
+			var secreto = Math.floor(Math.random()*2)+1;
+			function myFunction(){
+				var x = document.getElementById("M").value;
+				if (x==secreto){
+					document.getElementById("txt").innerHTML = "Has adivinado el numero secreto, el numero era "+secreto+". Para jugar otra vez recarga la pagina.";
+				}else {
+					document.getElementById("txt").innerHTML = "Eres un inutil, prueba otra vez";
+				}
+			}
+			/*var secreto = Math.floor(Math.random()*100)+1;
+			var jugando=true; //si jugando es TRUE quiere decir que aún no hemos adiviando el nº
+			var x = prompt ("Dime un número del 1 al 100");
+			do{
+				if (secreto >x )
+				{
+				console.log("Es mayor que ".concat(x));
+				}
+				else if (secreto <x )
+				{
+				console.log("Es menor que ".concat(x));
+				}
+				else
+				{
+				jugando=false;
+				}
+			} while (jugando);
+			console.log("Felicidades. Has adivinado el número ".concat(secreto)); */
+		</script>
+	</body>
 </html>
+
