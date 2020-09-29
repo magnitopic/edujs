@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+}
+
+#main{
+    margin: 3vh;
+    display: flex;
+}
