@@ -2,7 +2,32 @@
     margin: 0;
 }
 
-#main{
-    margin: 3vh;
+.main{
+    padding: 3vh;
     display: flex;
+}
+
+#ndec{
+    display: flex;
+    justify-content: center;
+    min-width: 170px;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+#output{
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    min-width: 170px;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    height: 21px;
+    border-style: solid;
+}
+
+#desarrollo{
+    padding-left: 3vh;
+    
 }
