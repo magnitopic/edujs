@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="javaScript.js"></script>
+  <title>Calculadora de IVA</title>
+</head>
+
+<body>
+  <div id='main'>
+    <h1>Calculadora de IVA en España</h1>
+
+    <div id="" class="generales">
+      <p class="titulos">Precio base</p>
+      <p class="titulos"> Importe del IVA</p>
+      <p class="titulos">Precio con IVA</p>
+    </div>
+
+    <div class="generales">
+      <input class="inputs" id=PBase type="number" placeholder="Precio base">
+      <input class="inputs" disabled="disabled" id="iva" type="number" placeholder="Importe del IVA">
+      <input class="inputs" disabled="disabled" id="PIVA" type="number" placeholder="Precio con IVA">
+        <select class="inputs" id="porcentaje">
+          <option value="0.21">21%</option>
+          <option value="0.10">10%</option>
+          <option value="0.04">4%</option>
+        </select><br><br>
+      <button onclick="calcular()" type="button">Calcular!</button>
+    </div>
+  </div>
+</body>
+
+</html>
