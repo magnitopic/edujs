@@ -11,22 +11,28 @@
 <body>
   <div id='main'>
     <h1>Calculadora de IVA en España</h1>
-
-    <div id="" class="generales">
-      <p class="titulos">Precio base</p>
-      <p class="titulos"> Importe del IVA</p>
-      <p class="titulos">Precio con IVA</p>
+    <div id="inputs">
+      <div class="derecha">
+        <p class="titulos">Precio base</p>
+        <input class="inputs" id=PBase type="number" placeholder="Precio base">
+      </div>
+  
+      <div class="derecha">
+        <p class="titulos"> Importe del IVA</p>
+        <input class="inputs" disabled="disabled" id="iva" type="number" placeholder="Importe del IVA">
+      </div>
+  
+      <div class="derecha">
+        <p class="titulos">Precio con IVA</p>
+        <input class="inputs" disabled="disabled" id="PIVA" type="number" placeholder="Precio con IVA">
+          <select class="inputs" id="porcentaje" style="margin-left: 2vw;">
+            <option value="0.21">21%</option>
+            <option value="0.10">10%</option>
+            <option value="0.04">4%</option>
+          </select><br><br>
+      </div>
     </div>
-
-    <div class="generales">
-      <input class="inputs" id=PBase type="number" placeholder="Precio base">
-      <input class="inputs" disabled="disabled" id="iva" type="number" placeholder="Importe del IVA">
-      <input class="inputs" disabled="disabled" id="PIVA" type="number" placeholder="Precio con IVA">
-        <select class="inputs" id="porcentaje">
-          <option value="0.21">21%</option>
-          <option value="0.10">10%</option>
-          <option value="0.04">4%</option>
-        </select><br><br>
+    <div class="derecha">
       <button onclick="calcular()" type="button">Calcular!</button>
     </div>
   </div>
