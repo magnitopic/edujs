@@ -25,6 +25,6 @@ for (var i in localStorage) {
 
 $(document).on('keypress',function(e) {
     if(e.which == 13) {
-        console.log(document.getElementById("add").click())
+        document.getElementById("add").click();
     }
 });
