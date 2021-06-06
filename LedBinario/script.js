@@ -28,10 +28,18 @@ async function delayedGreeting() {
                 console.log("======")
                 if (i) {
                     L1.style.backgroundColor = "rgb(177, 241, 250)"
-                } else if (j) {
+                } else {
+                    L1.style.backgroundColor = "rgb(0, 0, 190)"
+                }
+                if (j) {
                     L2.style.backgroundColor = "rgb(177, 241, 250)"
-                } else if (k) {
+                } else {
+                    L2.style.backgroundColor = "rgb(0, 0, 190)"
+                }
+                if (k) {
                     L3.style.backgroundColor = "rgb(177, 241, 250)"
+                } else {
+                    L3.style.backgroundColor = "rgb(0, 0, 190)"
                 }
             }
         }
