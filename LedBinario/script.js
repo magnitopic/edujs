@@ -38,17 +38,3 @@ async function delayedGreeting() {
     }
 }
 delayedGreeting();
-
-
-
-for (let t = 1; t <= 5; t++) {
-    setTimeout(() => {
-
-    }, 1000 * t)
-}
-
-
-
-//for (let i = 1; i <= 5; i++) {
-//    setTimeout(() => console.log(`Hello #${i}`), 1000 * i)
-//  }
