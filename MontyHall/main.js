@@ -12,8 +12,11 @@ document.querySelectorAll(".doors").forEach((element, i) => {
 document.querySelector("#reset").addEventListener("click", (e) => {
 	document.querySelectorAll(".doors").forEach((element) => {
 		element.src = "imgs/door.png";
-		round = 0;
 	});
+	doors = [0, 0, 0];
+	doors[parseInt(Math.random() * 3)] = 1;
+	console.log(doors);
+	round = 0;
 });
 
 const changeImages = (clickedDoor) => {
