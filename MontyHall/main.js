@@ -1,11 +1,15 @@
 doors = [0, 0, 0];
 doors[parseInt(Math.random() * 3)] = 1;
 console.log(doors);
-round = 0;
+round = undefined;
 
 document.querySelectorAll(".doors").forEach((element, i) => {
 	element.addEventListener("click", (e) => {
-		changeImages(i);
+		console.log(i);
+		console.log(round);
+		if (i != round) {
+			changeImages(i);
+		}
 	});
 });
 
@@ -16,22 +20,22 @@ document.querySelector("#reset").addEventListener("click", (e) => {
 	doors = [0, 0, 0];
 	doors[parseInt(Math.random() * 3)] = 1;
 	console.log(doors);
-	round = 0;
+	round = undefined;
 });
 
 const changeImages = (clickedDoor) => {
 	doorObjects = document.querySelectorAll(".doors");
-	if (!round) {
+	if (round === undefined) {
 		do {
 			rnd = parseInt(Math.random() * 3);
 		} while (doors[rnd] || rnd === clickedDoor);
 		doorObjects[rnd].src = "imgs/donky.png";
-	} else if (round < 2) {
+		round = rnd;
+	} else {
 		if (doors[clickedDoor]) {
 			doorObjects[clickedDoor].src = "imgs/car.png";
 		} else {
 			doorObjects[clickedDoor].src = "imgs/donky.png";
 		}
 	}
-	round++;
 };
