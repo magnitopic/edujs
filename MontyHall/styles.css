@@ -20,6 +20,7 @@
 }
 
 .doors {
+
 }
 
 #form {
@@ -29,4 +30,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+a{
+	margin-top: 1rem;
 }
