@@ -17,14 +17,18 @@ document.querySelector("#reset").addEventListener("click", (e) => {
 });
 
 const changeImages = (clickedDoor) => {
+	doorObjects = document.querySelectorAll(".doors");
 	if (!round) {
-		e.target.src = "imgs/donky.png";
 		do {
 			rnd = parseInt(Math.random() * 3);
 		} while (doors[rnd] || rnd === clickedDoor);
-		document.querySelectorAll(".doors")[rnd].src = "imgs/donky.png";
+		doorObjects[rnd].src = "imgs/donky.png";
 	} else if (round < 2) {
-		e.target.src = "imgs/car.png";
+		if (doors[clickedDoor]) {
+			doorObjects[clickedDoor].src = "imgs/car.png";
+		} else {
+			doorObjects[clickedDoor].src = "imgs/donky.png";
+		}
 	}
 	round++;
 };
