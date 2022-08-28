@@ -10,8 +10,6 @@ info.innerText = "Choose a door";
 
 document.querySelectorAll(".doors").forEach((element, i) => {
 	element.addEventListener("click", (e) => {
-		console.log(i);
-		console.log(round);
 		if (i != round) {
 			changeImages(i);
 		}
@@ -50,5 +48,4 @@ const changeImages = (clickedDoor) => {
 			info.innerText = `Sorry... You picked the wrong door.`;
 		}
 	}
-	changeText();
 };
