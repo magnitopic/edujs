@@ -8,7 +8,10 @@ const info = document.querySelector("#info");
 const results = document.querySelector("#results");
 // Global vars and initial text
 round = undefined;
-info.innerText = "Choose a door.";
+var gamesPlayed = 1;
+var changed = [];
+var stiked = [];
+info.innerText = "Please. Choose a door.";
 
 document.querySelectorAll(".doors").forEach((element, i) => {
 	element.addEventListener("click", (e) => {
@@ -26,7 +29,7 @@ document.querySelector("#reset").addEventListener("click", (e) => {
 	doors[parseInt(Math.random() * 3)] = 1;
 	console.log(doors);
 	round = undefined;
-	info.innerText = "Choose a door.";
+	info.innerText = "Please. Choose a door.";
 });
 
 const changeImages = (clickedDoor) => {
@@ -45,10 +48,29 @@ const changeImages = (clickedDoor) => {
 		if (doors[clickedDoor]) {
 			doorObjects[clickedDoor].src = "imgs/car.png";
 			info.innerText = `Good choice! You found the price.`;
+			clickedDoor == round ? changed.push(1) : stiked.push(1);
 		} else {
 			doorObjects[clickedDoor].src = "imgs/donky.png";
 			info.innerText = `Sorry... You picked the wrong door.`;
+			clickedDoor == round ? changed.push(0) : stiked.push(0);
 		}
+		changeStatistics();
 		round = "finish";
 	}
+};
+
+const changeStatistics = () => {
+	// Game statistics
+	var i = 1;
+	var changedSum = 0;
+	var stikedSum = 0;
+	changed.forEach((x) => (changedSum += x));
+	stiked.forEach((x) => (stikedSum += x));
+
+	results.innerHTML = `
+	<h3>Game statistics</h3>
+	${gamesPlayed++} game${gamesPlayed - 1 > 1 ? "s" : ""} played.<br>
+	${i}% of games won changing. (${changedSum} / ${changed.length})<br>
+	${i}% of games won not changing. (${stikedSum} / ${stiked.length})<br>
+	`;
 };
