@@ -1,0 +1,92 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 2em;
+}
+
+.container {
+	width: 13em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.title {
+	text-align: center;
+	color: red;
+	font-weight: bold;
+	font-size: 1.5em;
+	&:before {
+		content: "";
+		z-index: 2;
+		border: 3px solid red;
+		position: absolute;
+		top: 55%;
+		left: 45%;
+		width: 0.5em;
+	}
+}
+
+.bolaHolder {
+	display: inline-block;
+	height: 8em;
+	width: 8em;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin: 10px;
+	border: 3px solid red;
+}
+
+.bolas {
+	position: absolute;
+	height: 11em;
+	width: 11em;
+	overflow: hidden;
+	background-position: center;
+	background-size: cover;
+	animation: play 3s steps(60) infinite alternate;
+	animation-play-state: paused;
+	&:hover {
+		animation-play-state: running;
+	}
+}
+.bola1 {
+	background-image: url(img/metabola1.webp);
+}
+.bola2 {
+	background-image: url(img/metabola2.webp);
+}
+.bola3 {
+	background-image: url(img/metabola3.webp);
+}
+
+.icon {
+	height: 3.5em;
+	width: 3.5em;
+	z-index: 1;
+}
+
+@keyframes play {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100% 0;
+	}
+}
